@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        
+        <title>
+            Assignment 7
+        </title>
+        
+        <style>
+            body {background-color: lightcoral;
+                font-size: 24px;}
+            
+            input {font-size: 24px;}
+            
+            input:hover {background-color: cyan;}
+            
+                
+        </style>
+        
+        <script>
+        function addNum() {
+            var value1 = parseFloat(document.getElementById("box1").value);
+            var value2 = parseFloat(document.getElementById("box2").value);
+            var total = value1 + value2;
+            document.getElementById("answer").innerHTML = total;
+            document.getElementById("sign").innerHTML = "+";
+        }
+            
+        function subNum() {
+            var value1 = parseFloat(document.getElementById("box1").value);
+            var value2 = parseFloat(document.getElementById("box2").value);
+            var total = value1 - value2;
+            document.getElementById("answer").innerHTML = total;
+            document.getElementById("sign").innerHTML = "-";
+        }
+            
+        function mulNum() {
+            var value1 = parseFloat(document.getElementById("box1").value);
+            var value2 = parseFloat(document.getElementById("box2").value);
+            var total = value1 * value2;
+            document.getElementById("answer").innerHTML = total;
+            document.getElementById("sign").innerHTML = "x";
+        }
+            
+        function divNum() {
+            var value1 = parseFloat(document.getElementById("box1").value);
+            var value2 = parseFloat(document.getElementById("box2").value);
+            var total = value1 / value2;
+            document.getElementById("answer").innerHTML = total;
+            document.getElementById("sign").innerHTML = "&divide";
+        }
+            
+        function clearAll() {
+            var value1 = document.getElementById("box1").value = ""
+            var value2 = document.getElementById("box2").value = ""
+            document.getElementById("answer").innerHTML = " ";
+            document.getElementById("sign").innerHTML = "&nbsp";
+        }
+            
+        
+        
+
+        
+            
+            
+        </script>
+        
+        
+    </head>
+    <body>
+        <h1>
+            Math with JavaScript
+        </h1>
+        
+        <input type="text" size="5" id="box1">
+        
+        <span id="sign">
+            &nbsp; 
+        </span>
+        
+        <input type="text" size="5" id="box2">
+        
+        =
+        
+        <span id="answer">
+            &nbsp;
+        </span>
+        
+        <br><br>
+        
+        <input type="button" value="Add" onclick="addNum();">
+        <input type="button" value="Subtract" onclick="subNum();">
+        <input type="button" value="Multiply" onclick="mulNum();">
+        <input type="button" value="Divide" onclick="divNum();">
+        <input type="button" value="Clear" onclick="clearAll();">
+        
+    </body>
+</html>
